@@ -23,7 +23,7 @@ At least one instance must be configured.
 | Limit (Events per Request)     | Events are queried page by page. Limit of Events which should be fetched per request (default: 1k, max: 1M). |
 | Limit (Attributes per Request) | Attributes are queried page by page. Limit of Attributes which should be fetched per request (default: 1k, max: 1M) |
 
-In **App Settings -> MISP App Settings** a default instance can be set (maybe a browser refresh is necessary if the instance is recently configured). This instance is used per default for all custom commands and for the alert action if no instance is specified.
+In **App Settings -> Configuration -> MISP App Settings** a default instance can be set (maybe a browser refresh is necessary if the instance is recently configured). This instance is used per default for all custom commands and for the alert action if no instance is specified.
 
 ## Importing IOCs into Splunk
 The App provides two modular inputs for importing MISP attributes/IOCs and MISP events.
