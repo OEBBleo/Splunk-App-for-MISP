@@ -106,7 +106,7 @@ It is possible to handle false positives by tagging them in MISP and set the wei
 
 Search for MISP attributes on a MISP instance using the MISP API. 
 
-Queries a list of MISP attributes and provides filter and data normaization features. It is possible to filter tags, events, values, timestamps, to_ids etc. and to normalize the output using normalize_fields (enabled by default).
+Queries a list of MISP attributes and provides filter and data normalization features. It is possible to filter tags, events, values, timestamps, to_ids etc. and to normalize the output using normalize_fields (enabled by default).
 
 #### Syntax
 which makes app maintenance much easier.
