@@ -100,6 +100,19 @@ By default the provided reports use a linear decaying score starting by 100 and 
 
 It is possible to handle false positives by tagging them in MISP and set the weight for this tag to zero using misp_decaying_scores.csv lookup-table. In this case it is important, that these Attributes stay in Splunk continuously, which also may apply for critical IOCs. This can be achieved by adding another indicator input, which filters the tags for false positives and critical iocs. The input should be scheduled once a day, **shouldn't** use continuous importing and **should** override the attribute timestamps. With this configuration these indicators are ingested each days with the actual timestamp and are active as long the tag exists.
 
+#### Example
+
+Imagine you have identified some IOC that is always false positive and you want to prevent it from triggering from now on.
+
+Add the following to `misp_decaying_scores.csv`
+| DecayLifetime | DecaySpeed | OrgId | Score | Tag | Type |
+|--------|--------|--------|--------|--------|--------|
+|   |   |   | 0 | suppress |static |
+
+*Do not exclude the Tag in 'Update MISP Indicator Input'*. It needs to be imported so that the weight can get to 0 during the report generation and thus be omitted.
+
+Now you can add this tag to any event or attribute in misp.
+
 ## Commands
 
 ### Search Attributes
