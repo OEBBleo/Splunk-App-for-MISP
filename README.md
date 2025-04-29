@@ -67,7 +67,7 @@ The MISP Indicator Input imports MISP indicators. The Indicators are imported re
 | Max Requests (Events per execution) | Must be a multiple of the depending request limit. Max amount of Events  from which Attributes should be imported each import execution (max is  100k) |
 | Import Period                       | Import period over which indicators should be imported in day(s), month(s) or year(s) (`<int>`d\|h\|m). If older events (event timestamp not publish timestamp) are published in MISP, these events will be ignored. |
 | Types                               | MISP type filter, e.g.: "domain,domain", only Indicators which match one of these types. |
-| To IDS                              | If enabled, only attributes with to_ids=true are imported.   |
+| To IDS                              | Imnport only attributes which have the checkbox IDS (for Intrusion Detection System) set (to_ids=true). |
 | Published                           | Only ingest attributes which are published.                  |
 | Include Tags                        | MISP tag include filter, e.g.: "tlp:red,tlp:amber"           |
 | Exclude Tags                        | MISP tag include filter, e.g.: "tlp:white,tlp:amber"         |
